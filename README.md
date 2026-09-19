@@ -1,5 +1,7 @@
 # Reader
 
+[![Monorepo CI](https://github.com/Marvy101/reader-source/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Marvy101/reader-source/actions/workflows/ci.yml)
+
 **A native AI reading workspace for macOS.**
 
 Reader keeps the book, your notes, web research, and an AI conversation in one
@@ -33,34 +35,6 @@ account or backend. Supabase sync and AI features are optional additions.
 
 This monorepo contains the native Reader app and its optional Hono, Supabase,
 and Vercel backend.
-
-## Repository layout
-
-```text
-Reader/          Native Swift and SwiftUI source
-ReaderTests/     Native tests
-Backend/         Hono, Supabase, and Vercel backend
-TestCorpus/      Reproducible public-domain format corpus
-```
-
-All new app and backend work branches from this repository. Backend changes no longer need a separate checkout or a paired cross-repository pull request.
-
-## The current experiment
-
-The app owns a shared Reader Core for search, locators, selections, annotations, progress intent, and capabilities. Format adapters translate those concepts into the rendering primitive that fits:
-
-```text
-SwiftUI reading experience
-└── Reader Core
-    ├── PDF adapter → PDFKit
-    └── Reflowable adapter → owned EPUB/TXT parser + hardened WKWebView
-```
-
-This is Option A under active evaluation, not a claim of complete EPUB conformance. The native runtime dependencies are pinned [ZIPFoundation](https://github.com/weichsel/ZIPFoundation) for archive extraction and [GRDB](https://github.com/groue/GRDB.swift) for SQLite persistence. Neither is a reading engine.
-
-## Mac first, never Mac only
-
-Reader is built natively in Swift, making it easy to bring to iOS and iPadOS; that goal guides technical decisions so one shared codebase can support macOS, iOS, and iPadOS.
 
 ## Run
 
@@ -121,6 +95,34 @@ make check
 The backend package has more detail in [`Backend/README.md`](Backend/README.md).
 The complete app-only and cloud setup is in [SETUP.md](SETUP.md).
 
+I know you're just having your agent run this, so here's a guide made specifically for it lol: [AGENT_SETUP.md](AGENT_SETUP.md).
+
+## Repository layout
+
+```text
+Reader/          Native Swift and SwiftUI source
+ReaderTests/     Native tests
+Backend/         Hono, Supabase, and Vercel backend
+TestCorpus/      Reproducible public-domain format corpus
+```
+
+## How it works
+
+The app owns a shared Reader Core for search, locators, selections, annotations, progress intent, and capabilities. Format adapters translate those concepts into the rendering primitive that fits:
+
+```text
+SwiftUI reading experience
+└── Reader Core
+    ├── PDF adapter → PDFKit
+    └── Reflowable adapter → owned EPUB/TXT parser + hardened WKWebView
+```
+
+Reader uses [ZIPFoundation](https://github.com/weichsel/ZIPFoundation) for archive extraction and [GRDB](https://github.com/groue/GRDB.swift) for SQLite persistence. Rendering remains owned by Reader through PDFKit and its EPUB/TXT WebKit adapter.
+
+## Mac first, never Mac only
+
+Reader is built natively in Swift, making it easy to bring to iOS and iPadOS; that goal guides technical decisions so one shared codebase can support macOS, iOS, and iPadOS.
+
 ## What is implemented
 
 - Native macOS app with SwiftUI
@@ -136,13 +138,10 @@ The complete app-only and cloud setup is in [SETUP.md](SETUP.md).
 - Local SQLite persistence for library entries, progress, highlights, and conversations
 - EPUB is vertically reflowed by section; pagination and full standards coverage are still open
 - Local reading remains available when cloud sync or AI preparation fails
-- Placeholder product name and bundle identifier
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the development workflow and contribution terms.
-
-I know you're just having your agent run this, so here's a guide made specifically for it lol: [AGENT_SETUP.md](AGENT_SETUP.md).
 
 ## License
 
