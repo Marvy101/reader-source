@@ -1,8 +1,8 @@
 # Contributing to Reader
 
-Reader is source available under the [Reader Personal Use and Source Sharing
-License](LICENSE). Source forks and patches are welcome under those terms.
-Contributions retain their authors' copyright and use the same license.
+Reader is open source under the [MIT License](LICENSE). Forks and patches are
+welcome. Contributors retain their copyright, and submitted contributions are
+licensed under the same MIT terms.
 
 Read [AGENTS.md](AGENTS.md) before making changes. Keep native and optional
 backend changes in this repository, use a dedicated branch, and submit a
@@ -27,6 +27,5 @@ locators, DRM, import ownership, or sync require the architectural checks
 in AGENTS.md.
 
 Third-party dependencies and assets retain their own licenses. Do not
-submit code or assets you do not have permission to license under these
-terms. Publishing a compiled fork or an App Store version requires separate
-written permission, even if it is free.
+submit code or assets you do not have permission to license under the MIT
+License.
