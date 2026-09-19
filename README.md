@@ -141,8 +141,8 @@ The complete app-only and cloud setup is in [SETUP.md](SETUP.md).
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the development workflow and contribution terms.
-Agents can follow [AGENT_SETUP.md](AGENT_SETUP.md) for Codex, Claude Code,
-CLI, and optional MCP setup.
+
+I know you're just having your agent run this, so here's a guide made specifically for it lol: [AGENT_SETUP.md](AGENT_SETUP.md).
 
 ## License
 
