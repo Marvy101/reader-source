@@ -60,11 +60,7 @@ This is Option A under active evaluation, not a claim of complete EPUB conforman
 
 ## Mac first, never Mac only
 
-The current milestone is a native macOS app, but every architectural decision must preserve a credible native iOS and iPadOS path. The mobile targets will live in this repository and, unless evidence forces a change, in this Xcode project.
-
-Shared domain models, reading state, design primitives, format capabilities, and most SwiftUI features should remain platform-neutral. AppKit and UIKit belong behind narrow adapters. A feature may ship on macOS first; its underlying contract must not assume a mouse, desktop file paths, unrestricted background work, or AppKit-only rendering.
-
-These constraints are also captured in [`AGENTS.md`](AGENTS.md) so future implementation work sees them before changing the code.
+Reader is built natively in Swift, making it easy to bring to iOS and iPadOS; that goal guides technical decisions so one shared codebase can support macOS, iOS, and iPadOS.
 
 ## Run
 
