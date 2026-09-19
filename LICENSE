@@ -1,62 +1,21 @@
-Reader Personal Use and Source Sharing License 1.0
+MIT License
 
-Copyright (c) 2026 Reader contributors.
+Copyright (c) 2026 Reader contributors
 
-NO COMPILED REDISTRIBUTION OR APP-STORE PUBLICATION IS PERMITTED WITHOUT
-SEPARATE WRITTEN PERMISSION. The copyright holders keep the right to publish
-official builds and to grant separate licenses.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. Scope
-"Software" means the original Reader code and documentation provided under
-this license, including modifications and derivative works. Third-party
-materials are governed by their own licenses and are not relicensed here.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. Personal use
-You may inspect, download, copy, modify, build, and run the Software for your
-own personal use. You may install your own builds on devices you own or
-control and operate a private backend solely for your own use.
-
-3. Source sharing and contributions
-You may share the Software in source-code form, including public forks and
-patches, without charging for access. You must preserve this license and
-copyright notices, identify your modifications, and provide your changes
-under this same license. This permission does not include distributing
-compiled applications, installers, or executable packages.
-
-4. Distribution and service restrictions
-Without separate prior written permission from the relevant copyright
-holders, you may not publish, submit, list, sell, sublicense, or distribute
-the Software or a modified or derivative application in compiled or
-executable form to others. In particular, you may not publish it on the
-Apple App Store, Mac App Store, another app store, or a software marketplace,
-whether free or paid and whether under its original or a different name.
-You may not provide the Software as a hosted service for others.
-These restrictions also apply to applications incorporating substantial
-portions of the Software; merely renaming or modifying it does not remove
-them. Permissions required by applicable law are unaffected.
-
-5. Attribution and branding
-Source forks must clearly identify themselves as unofficial. No trademark
-rights or permission to imply endorsement are granted by this license.
-
-6. Contributions
-By intentionally submitting a contribution for inclusion in Reader, you
-license that contribution under these terms. You retain your copyright.
-No copyright assignment or additional relicensing permission is implied.
-
-7. Termination
-Permissions terminate automatically if you violate these terms. On
-termination you must stop uses that rely on this license. The copyright
-holders may grant reinstatement in writing.
-
-8. Warranty and liability
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
-NONINFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE AUTHORS AND
-COPYRIGHT HOLDERS ARE NOT LIABLE FOR CLAIMS, DAMAGES, OR OTHER LIABILITY
-ARISING FROM THE SOFTWARE OR ITS USE.
-
-9. Other rights
-All rights not expressly granted are reserved. This is a source-available,
-personal-use license, not an OSI-approved open-source license. Separate
-written permission is required for uses outside the grants above.
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -2,7 +2,7 @@
 
 [![Monorepo CI](https://github.com/Marvy101/reader-source/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Marvy101/reader-source/actions/workflows/ci.yml)
 
-**A native AI reading workspace for macOS.**
+**An open-source, native AI reading workspace for macOS.**
 
 Reader keeps the book, your notes, web research, and an AI conversation in one
 quiet workspace. Import PDF, EPUB, and TXT files; read in a native interface;
@@ -145,12 +145,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the development workflow and contribu
 
 ## License
 
-Reader is **source available for personal use**. You may inspect, build,
-modify, and run it for yourself, and you may share source forks under the same
-terms. See [LICENSE](LICENSE) for the complete terms.
-
-> **No compiled redistribution:** publishing Reader or a derivative as a
-> compiled app, App Store listing, marketplace download, or hosted service
-> requires separate written permission, even if it is free or renamed.
-
-This is a source-available license, not an OSI-approved open-source license.
+Reader is open source under the [MIT License](LICENSE). You may use,
+copy, modify, publish, distribute, sublicense, and sell copies of the software
+subject to the license terms.
