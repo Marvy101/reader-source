@@ -1,0 +1,36 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.xcresult
+*.profraw
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+!Reader.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+# macOS
+.DS_Store
+
+# Local tooling
+.env
+.env.*
+!.env.example
+AGENTS.override.md
+CLAUDE.local.md
+.mcp.json
+.claude/settings.local.json
+.codex/
+
+# Reproducible public-domain test corpus downloads
+TestCorpus/Downloads/
+Backend/.catalog-state/
+
+# Local Vercel project link
+.vercel/

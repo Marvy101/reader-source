@@ -1,0 +1,80 @@
+name: Reader
+
+options:
+  bundleIdPrefix: com.example
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "15.0"
+  xcodeVersion: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    CLANG_ENABLE_MODULES: YES
+
+packages:
+  GRDB:
+    url: https://github.com/groue/GRDB.swift.git
+    exactVersion: 7.11.1
+  ZIPFoundation:
+    url: https://github.com/weichsel/ZIPFoundation.git
+    exactVersion: 0.9.20
+
+targets:
+  Reader:
+    type: application
+    platform: macOS
+    sources:
+      - path: Reader
+    dependencies:
+      - package: GRDB
+      - package: ZIPFoundation
+    settings:
+      base:
+        READER_LOCAL_BUNDLE_IDENTIFIER: com.example.reader
+        READER_LOCAL_DISPLAY_NAME: Reader
+        READER_LOCAL_PRODUCT_NAME: Reader
+        PRODUCT_BUNDLE_IDENTIFIER: "$(READER_LOCAL_BUNDLE_IDENTIFIER)"
+        PRODUCT_MODULE_NAME: Reader
+        PRODUCT_NAME: "$(READER_LOCAL_PRODUCT_NAME)"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: "$(READER_LOCAL_DISPLAY_NAME)"
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.books
+        INFOPLIST_KEY_ReaderBackendURL: "$(READER_BACKEND_URL)"
+        READER_BACKEND_URL: http://127.0.0.1:3000
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_ENTITLEMENTS: Reader/Reader.entitlements
+        ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
+
+  ReaderTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: ReaderTests
+    dependencies:
+      - target: Reader
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.reader.tests
+        GENERATE_INFOPLIST_FILE: YES
+        READER_LOCAL_PRODUCT_NAME: Reader
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/$(READER_LOCAL_PRODUCT_NAME).app/Contents/MacOS/$(READER_LOCAL_PRODUCT_NAME)"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
+schemes:
+  Reader:
+    build:
+      targets:
+        Reader: all
+        ReaderTests: [test]
+    test:
+      gatherCoverageData: true
+      targets:
+        - ReaderTests
+    run:
+      config: Debug
+    archive:
+      config: Release
