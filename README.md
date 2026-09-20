@@ -14,6 +14,10 @@ The library and reading experience are local-first. Books, progress,
 highlights, notes, search, and saved conversations remain usable without an
 account or backend. Supabase sync and AI features are optional additions.
 
+<p align="center">
+  <img src="media/reader-demo.gif" alt="Reader library, reading, highlighting, notes, contextual AI, and research workspace demo" width="960">
+</p>
+
 ## Features
 
 - **Native reading:** import and read PDF, EPUB, and plain-text books in a
